@@ -1,68 +1,31 @@
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body styling */
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-y: scroll; /* Enable vertical scrolling */
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: #FAF8EF;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
 }
 
-/* title - portfolio - name */
-
-.title-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    position: fixed;
-    bottom: 280px;
-    right: 0;
-}
-
-.name {
-    font-family: "halyard-display", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 5vw;
-    margin-right: 10px;
-    text-align: right;
-
-}
-
-.portfolio {
-    font-family: "halyard-display", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: right;
-    margin-right: 30px;
-    position: relative;
-    line-height: 0.7; /* Ensures consistent line height */
-    font-size: 16vw;
-}
-
-/* title animation */
-
-.portfolio span {
-    display: inline-block;
-    transition: transform 0.3s ease;
-    transform-origin: bottom; /* Keeps the bottom of the letter in place */
-    position: relative;
-}
-.portfolio span:hover {
-    transform: scaleY(0.5); /* Shrinks the letter vertically */
-}
-
-/* navbar */
-
+/* Navbar styling */
 #navbar {
     display: flex;
     justify-content: space-between;
-    border-bottom: 2.5px solid #000000; 
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: transparent;
+    /* border-bottom: 2.5px solid #000000; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
 .navbar-menu a {
@@ -76,6 +39,7 @@ body {
     padding: 10px; 
     display: inline-block; 
     transition: opacity 0.3s ease;
+
 }
     
 .navbar-menu a:hover, .navbar-links a:hover {
@@ -105,22 +69,67 @@ body {
     font-size: 1.1em;
 }
 
+/* title - portfolio - name */
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: fixed;
+    bottom: 280px;
+    right: 0;
+    color: black
+}
+
+.name {
+    font-family: "halyard-display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5vw;
+    margin-right: 10px;
+    text-align: right;
+
+}
+
+.portfolio {
+    font-family: "halyard-display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: right;
+    margin-right: 30px;
+    line-height: 0.7; /* Ensures consistent line height */
+    font-size: 16vw;
+}
+
+/* title animation */
+
+.portfolio span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    transform-origin: bottom; /* Keeps the bottom of the letter in place */
+    position: relative;
+}
+.portfolio span:hover {
+    transform: scaleY(0.5); /* Shrinks the letter vertically */
+}
+
 /* images auto scroll */
 
 .scroller-wrapper {
     /* How long one slide is visible on screen (from entering screen to leaving it) */
-    --scrolling-gallery-item-duration: 12s;
+    --scrolling-gallery-item-duration: 10s;
     /* How many items we want to see on screen at once */
-    --scrolling-gallery-items-visible: 8;
+    --scrolling-gallery-items-visible: 7;
     /* How many items are to scroll */
-    --scrolling-gallery-items-total: 10;
+    --scrolling-gallery-items-total: 7;
     overflow-x: hidden;
     will-change: transform;
-    display: flex;
-    white-space: nowrap;
     position: absolute;
     bottom: 0;
     width: 100%;
+    gap: 32px;
 }
 
 .scroller {
@@ -129,8 +138,6 @@ body {
     animation-name: scrolling-gallery;
     animation-iteration-count: infinite;
     display: flex;
-    white-space: nowrap;
-    gap: 30px;
 }
 
 .scroller-container {
@@ -169,6 +176,26 @@ body {
 .scroller:hover,
 .scroller:focus {
     animation-play-state: paused;
+}
+
+/* Project gallery */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
 }
 
 
