@@ -181,26 +181,14 @@ body {
 }
 
 .tile7:hover {
-    background-color: #1A345A;
-}
-
-.tile8:hover {
-    background-color: #EB1F32;
-}
-
-.tile9:hover {
     background-color: #74495D;
 }
 
-.tile10:hover {
+.tile8:hover {
     background-color: #04954F;
 }
 
-.tile11:hover {
-    background-color: #EB1F32;
-}
-
-.tile12:hover {
+.tile9:hover {
     background-color: #FEB718;
 }
 
