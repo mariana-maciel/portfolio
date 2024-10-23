@@ -15,14 +15,13 @@ body {
     font-family: Arial, sans-serif;
 }
 
-
 /* Navbar styling */
 #navbar {
     display: flex;
     justify-content: space-between;
     /* border-bottom: 2.5px solid #000000; */
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 0.8vw;
+    padding-bottom: 0.8vw;
     background-color: #ffffff;
     position: fixed;
     width: 100%;
@@ -30,14 +29,14 @@ body {
 }
 
 .navbar-menu a {
-    margin-left: 20px;
+    margin-left: 1.5vw;
     text-decoration: none;
     color: #000000;
     font-family: "articulat-cf", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 25px;
-    padding: 10px; 
+    font-size: 1.8vw;
+    padding: 0.52vw; 
     display: inline-block; 
     transition: opacity 0.3s ease;
 
@@ -52,15 +51,15 @@ body {
     font-family: "articulat-cf", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 25px;
-    margin-right: 30px;
+    font-size: 1.8vw;
+    margin-right: 1.5vw;
 }
 
 .navbar-links a {
-    margin-left: 100px;
+    margin-left: 5.21vw;
     text-decoration: none;
     color: #000000;
-    padding: 10px; 
+    padding: 0.52vw; 
     display: inline-block; 
     transition: opacity 0.3s ease;
 }
