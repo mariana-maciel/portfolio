@@ -1,24 +1,25 @@
-// CUSTOM CURSOR
-
-document.addEventListener('DOMContentLoaded', function() {
-    var cursor = document.createElement('div');
-    cursor.classList.add('custom-cursor');
-    document.body.appendChild(cursor);
-
-    document.addEventListener('mousemove', function(e) {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('img'); // Select all images
+  
+    // Initially add the hidden class to all images
+    images.forEach(image => {
+      image.classList.add('hidden-on-scroll');
     });
-
-    var linkElements = document.querySelectorAll('.link, .cards-cta');
-    linkElements.forEach(function(element) {
-        element.addEventListener('mouseenter', function() {
-            cursor.classList.add('scale-up');
-        });
-
-        element.addEventListener('mouseleave', function() {
-            cursor.classList.remove('scale-up');
-        });
+  
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('hidden-on-scroll');
+          entry.target.classList.add('show-on-scroll');
+          observer.unobserve(entry.target); // Stop observing once it's animated
+        }
+      });
+    }, { threshold: 0.1 }); // Start animation when 10% is visible
+  
+    // Observe each image
+    images.forEach(image => {
+      observer.observe(image);
     });
-});
+  });
+  
 
