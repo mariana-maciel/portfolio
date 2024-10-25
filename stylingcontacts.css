@@ -1,0 +1,138 @@
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body styling */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar styling */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    /* border-bottom: 2.5px solid #000000; */
+    padding-top: 0.8vw;
+    padding-bottom: 0.8vw;
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-menu a {
+    margin-left: 1.5vw;
+    text-decoration: none;
+    color: #000000;
+    font-family: "articulat-cf", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.8vw;
+    padding: 0.52vw; 
+    display: inline-block; 
+    transition: opacity 0.3s ease;
+
+}
+    
+.navbar-menu a:hover, .navbar-links a:hover {
+    opacity: 0.5;
+}
+
+.navbar-links {
+    display: inline;
+    font-family: "articulat-cf", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.8vw;
+    margin-right: 1.5vw;
+}
+
+.navbar-links a {
+    margin-left: 5.21vw;
+    text-decoration: none;
+    color: #000000;
+    padding: 0.52vw; 
+    display: inline-block; 
+    transition: opacity 0.3s ease;
+}
+
+#navbar-title {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* left side*/
+
+.contact-container h1 {
+    font-family: "halyard-display", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-right: 50px;
+    line-height: 0.7; /* Ensures consistent line height */
+    font-size: 10vw;
+    margin-left: 6vw;
+    float: left;
+    position: fixed;
+    margin-top: 10vw;
+}
+
+/* right side */
+
+.contact-details {
+    margin-left: 62vw;
+    margin-top: 20vw;
+}
+
+.text {
+    font-family: "halyard-display", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 2.2vw;
+    line-height: 1.6; 
+    margin-right: 5vw;
+    text-align: justify;
+}
+
+.phoneinformation{
+    display: flex;
+}
+
+.phone img {
+    width: 3vw;
+    margin-top: 1vw;
+}
+
+.phonetext {
+    display: flex;
+    font-family: "halyard-display", sans-serif;
+    font-weight: 100;
+    font-style: normal; 
+    font-size: 1.5vw;
+    margin-left: 2vw;
+}
+
+.mailinformation{
+    display: flex;
+}
+
+.mail img {
+    width: 3vw;
+    margin-top: 1.5vw;
+}
+
+.mailtext {
+    display: flex;
+    font-family: "halyard-display", sans-serif;
+    font-weight: 100;
+    font-style: normal; 
+    font-size: 1.5vw;
+    margin-left: 2vw;
+}
