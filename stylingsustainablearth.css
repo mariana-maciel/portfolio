@@ -101,8 +101,8 @@ body {
     text-align: right;
     margin-right: 6vw;
     line-height: 1.2;
-    margin-left: 52vw;
-    margin-top: 5vw;
+    margin-left: 53vw;
+    margin-top: 5.2vw;
     line-height: 1.4;
 }
 
@@ -134,17 +134,18 @@ body {
     padding: 0 6vw;
     box-sizing: border-box;
     max-width: 100vw;
-    margin-left: 13vw;
-    margin-right: 8vw;
+    margin-left: 9vw;
+    margin-right: 7vw;
     margin-top: 12vw;
 }
 
 .image1 img {
-    max-width: 28vw; 
+    max-width: 35vw; 
     height: auto; 
     object-fit: cover;
     opacity: 1;
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    margin-top: 5vw;
 }
 
 .image1-title{
@@ -155,7 +156,6 @@ body {
     font-size: 3vw;
     line-height: 1.2;
     margin-left: 6vw;
-    margin-top: 10vw;
 }
 
 .image1-maintext {
@@ -179,8 +179,8 @@ body {
     padding: 0 6vw;
     box-sizing: border-box;
     max-width: 100vw;
-    margin-left: 6vw;
     margin-top: 15vw;
+    margin-left: 1vw;
 }
 
 .image-section1 img {
@@ -189,12 +189,12 @@ body {
     object-fit: cover;
     opacity: 1;
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    margin-top: 3vw;
+    margin-top: 6vw;
 }
 
 .text-section1 {
     flex: 1;
-    margin-left: 6vw;
+    margin-left: 3vw;
     margin-top: 2.5vw;
 }
 
@@ -203,6 +203,8 @@ body {
     font-weight: 500;
     font-style: normal;
     font-size: 3vw;
+    text-align: right;
+    margin-right: 8vw;
 }
 
 .text-section1 p {
@@ -216,79 +218,42 @@ body {
     margin-right: 8vw;
 }
 
-/* 3rd section */
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-right: 6vw;
-    margin-top: 12vw;
-}
-
-.text-section {
-    flex: 2;
-    margin-right: 20px;
-}
-
-.text-section h1 {
-    font-family: halyard-display, sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 3vw;
-    margin-bottom: 20px;
-    text-align: right;
-    margin-right: 6vw;
-}
-
-.text-section p {
-    font-family: "halyard-text", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    font-size: 1.2vw;
-    line-height: 1.2;
-    margin-right: 6vw;
-    margin-left: 20vw;
-    text-indent: 3em;
-    text-align: justify;
-}
-
-.image-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-
-}
-
-.image-section img {
-    width: 70%;
-    height: auto;
-    object-fit: cover;
-    margin-top: 2.5vw;
-}
-
-/* video */
-
-.video {
-    margin-right: auto;
-    margin-top: 5vw;
-}
-
-.video-container {
-    display: flex;
-    justify-content: flex-start; /* Align video container as needed */
-    max-width: 100%; /* Ensure the container doesn't stretch */
-    margin: 0 auto; /* Center the container */
+.pages{
     margin-top: 10vw;
-    
 }
 
-.video-container video {
-    width: 100%; /* Allow the video to adjust to its container */
-    max-width: 80vw; /* Set a maximum width for the video */
-    height: auto; /* Automatically adjust height to maintain aspect ratio */
-    margin-top: 1vw; /* Adjust top margin */
-    margin-bottom: 4vw; 
+/* 1st row */
+
+.image-container-final {
+    display: flex;
+    gap: 25px;
+    margin-top: 4vw;
+    margin-bottom: 2vw;
+    margin-left: 8vw;
+}
+
+.side-image {
+    width: auto;
+    height: 45vh;
+    display: block;
+    opacity: 1;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* 3rd row */
+.image-container-final3 {
+    display: flex;
+    gap: 25px;
+    margin-left: 28vw;
+    margin-bottom: 16vw;   
+}
+
+.side-image3 {
+    width: auto;
+    height: 45vh;
+    display: block;
+    opacity: 1;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 /* Start the images with opacity: 1, and we will hide them using JavaScript */
