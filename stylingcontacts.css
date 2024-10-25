@@ -77,7 +77,7 @@ body {
     font-style: normal;
     margin-right: 50px;
     line-height: 0.7; /* Ensures consistent line height */
-    font-size: 10vw;
+    font-size: 8vw;
     margin-left: 6vw;
     float: left;
     position: fixed;
@@ -87,15 +87,16 @@ body {
 /* right side */
 
 .contact-details {
-    margin-left: 62vw;
-    margin-top: 20vw;
+    margin-left: 60vw;
+    margin-top: 15vw;
+    margin-right: 6vw;
 }
 
 .text {
     font-family: "halyard-display", sans-serif;
     font-weight: 100;
     font-style: normal;
-    font-size: 2.2vw;
+    font-size: 1.8vw;
     line-height: 1.6; 
     margin-right: 5vw;
     text-align: justify;
@@ -136,3 +137,18 @@ body {
     font-size: 1.5vw;
     margin-left: 2vw;
 }
+
+.social-icons {
+    display: flex;
+}
+
+.linkedin img {
+    width: 4vw;
+    margin-top: 1.5vw;
+} 
+
+.instagram img {
+    width: 4vw;
+    margin-top: 1.5vw;
+    margin-left: 1vw;
+} 
