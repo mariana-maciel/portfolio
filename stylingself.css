@@ -1,24 +1,24 @@
-/* Smooth scrolling */
+/* smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Body styling */
+/* body styling */
 body {
     margin: 0;
     padding: 0;
-    overflow-y: scroll; /* Enable vertical scrolling */
+    overflow-y: scroll; 
     display: flex;
     flex-direction: column;
     height: 100vh;
     background-color: #ffffff;
     font-family: Arial, sans-serif;
 }
-/* Navbar styling */
+
+/* navbar */
 #navbar {
     display: flex;
     justify-content: space-between;
-    /* border-bottom: 2.5px solid #000000; */
     padding-top: 0.8vw;
     padding-bottom: 0.8vw;
     background-color: #ffffff;
@@ -68,10 +68,13 @@ body {
     font-size: 1.1em;
 }
 
+
 .title-container {
     display: flex;
     margin-top:4vw;
 }
+
+/* title and subtitle */
 
 .title {
     font-family: halyard-display, sans-serif;
@@ -106,7 +109,7 @@ body {
     line-height: 1.4;
 }
 
-/* Center the image and add margins */
+/* cover */
 .cover {
     display: flex;
     justify-content: center;
@@ -166,8 +169,6 @@ body {
     text-align: justify;
     line-height: 1.2;
     margin-left: 6vw;
-
-
 }
 
 /* 2nd section */
@@ -215,7 +216,7 @@ body {
     margin-right: 8vw;
 }
 
-/* final composition*/
+/* 3rd section final composition */
 
 .final {
     text-align: left; 
@@ -228,13 +229,13 @@ body {
     font-weight: 500;
     font-style: normal;
     font-size: 3vw;
-    margin-bottom: 25px; /* Space between title and images */
+    margin-bottom: 25px; 
     margin-left: 4vw;
 }
 
 .image-container-final {
     display: flex;
-    gap: 25px; /* Space between the images */
+    gap: 25px;
     margin-left: 8vw;
     margin-top: 4vw;
     margin-bottom: 12vw;
@@ -242,29 +243,19 @@ body {
 }
 
 .side-image {
-    width: 38vw; /* Adjust the width as needed */
+    width: 38vw;
     height: auto;
     display: block;
     opacity: 1;
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* Start the images with opacity: 1, and we will hide them using JavaScript */
-.image-section img {
-    width: 70%;
-    height: auto;
-    object-fit: cover;
-    opacity: 1; /* Default to visible */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-/* Hidden state for images initially */
+/* images animation */
 .hidden-on-scroll {
     opacity: 0;
     transform: translateY(50px);
 }
 
-/* Class added by JavaScript to trigger the scroll animation */
 .show-on-scroll {
     opacity: 1;
     transform: translateY(0);

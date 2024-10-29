@@ -1,13 +1,13 @@
-/* Smooth scrolling */
+/* smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Body styling */
+/* body styling */
 body {
     margin: 0;
     padding: 0;
-    overflow-y: scroll; /* Enable vertical scrolling */
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -15,11 +15,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Navbar styling */
+/* navbar */
 #navbar {
     display: flex;
     justify-content: space-between;
-    /* border-bottom: 2.5px solid #000000; */
     padding-top: 0.8vw;
     padding-bottom: 0.8vw;
     background-color: #ffffff;
@@ -69,12 +68,14 @@ body {
     font-size: 1.1em;
 }
 
+/* title and text */
+
 .projects {
     font-family: "halyard-display", sans-serif;
     font-weight: 400;
     font-style: normal;
     margin-right: 50px;
-    line-height: 0.7; /* Ensures consistent line height */
+    line-height: 0.7; 
     font-size: 6vw;
     margin-left: 30px;
     float: left;
@@ -86,7 +87,7 @@ body {
     font-weight: 100;
     font-style: normal;
     margin-right: 50px;
-    line-height: 0.7; /* Ensures consistent line height */
+    line-height: 0.7;
     font-size: 1vw;
     margin-left: 25px;
     float: left;
@@ -103,11 +104,11 @@ body {
 .projects span {
     display: inline-block;
     transition: transform 0.3s ease;
-    transform-origin: bottom; /* Keeps the bottom of the letter in place */
+    transform-origin: bottom;
     position: relative;
 }
 .projects span:hover {
-    transform: scaleY(0.5); /* Shrinks the letter vertically */
+    transform: scaleY(0.5); 
 }
 
 /* gallery */
@@ -138,10 +139,10 @@ body {
     left: 15px;
     font-family: "articulat-cf", sans-serif;
     font-size: 24px;
-    color: white; /* Text color */
-    opacity: 0; /* Start hidden */
-    transition: opacity 0.4s ease; /* Smooth text fade-in */
-    z-index: 2; /* Ensure the text is above the image */
+    color: white; 
+    opacity: 0; 
+    transition: opacity 0.4s ease; 
+    z-index: 2; 
 }
 
 .description {
@@ -150,11 +151,13 @@ body {
     left: 22px;
     font-family: "articulat-cf", sans-serif;
     font-size: 12px;
-    color: white; /* Text color */
-    opacity: 0; /* Start hidden */
-    transition: opacity 0.4s ease; /* Smooth text fade-in */
-    z-index: 2; /* Ensure the text is above the image */
+    color: white;
+    opacity: 0; 
+    transition: opacity 0.4s ease; 
+    z-index: 2; 
 }
+
+/* tile hover color */
 
 .tile1:hover {
     background-color: #41ACF8;
@@ -192,13 +195,12 @@ body {
     background-color: #FEB718;
 }
 
-
 .tile:hover img {
     opacity: 0;
 }
 
 .tile:hover .tile-text, .tile:hover .description {
-    opacity: 1; /* Show the text */
+    opacity: 1; 
     color: white;
 }
 

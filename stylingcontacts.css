@@ -1,9 +1,9 @@
-/* Smooth scrolling */
+/* smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Body styling */
+/* body styling */
 body {
     margin: 0;
     padding: 0;
@@ -15,10 +15,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Fade-in animation for all elements except navbar */
+/* fade-in animation */
 .fade-in {
     opacity: 0;
-    animation: fadeIn 0.5s forwards; /* Adjusted duration for faster fade */
+    animation: fadeIn 0.5s forwards; 
 }
 
 @keyframes fadeIn {
@@ -90,7 +90,7 @@ body {
     font-weight: 400;
     font-style: normal;
     margin-right: 50px;
-    line-height: 0.7; /* Ensures consistent line height */
+    line-height: 0.7; 
     font-size: 8vw;
     margin-left: 6vw;
     float: left;
@@ -178,6 +178,6 @@ body {
 /* Applying fade-in class to the images and text */
 .contact-container,
 .contact-details{
-    opacity: 0; /* Initial state for fade-in */
-    animation: fadeIn 0.5s forwards; /* Faster fade-in duration */
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
 }

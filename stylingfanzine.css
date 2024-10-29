@@ -1,14 +1,13 @@
-/* Smooth scrolling */
+/* smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Body styling */
+/* body styling */
 body {
     margin: 0;
     padding: 0;
     overflow-y: scroll;
-    /* Enable vertical scrolling */
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -16,11 +15,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Navbar styling */
+/* navbar styling */
 #navbar {
     display: flex;
     justify-content: space-between;
-    /* border-bottom: 2.5px solid #000000; */
     padding-top: 0.8vw;
     padding-bottom: 0.8vw;
     background-color: #ffffff;
@@ -71,6 +69,8 @@ body {
     font-size: 1.1em;
 }
 
+/* title and subtitle */
+
 .title-container {
     display: flex;
     margin-top: 4vw;
@@ -104,12 +104,12 @@ body {
     text-align: right;
     margin-right: 6vw;
     line-height: 1.2;
-    margin-left: 49vw;
+    margin-left: 48vw;
     margin-top: 6vw;
     line-height: 1.4;
 }
 
-/* Center the image and add margins */
+/* cover image */
 .cover {
     display: flex;
     justify-content: center;
@@ -220,7 +220,7 @@ body {
     margin-right: 8vw;
 }
 
-/* 3rd section */
+/* 3rd section pages */
 
 /* 1st row */
 
@@ -274,7 +274,7 @@ body {
 /* mockup */
 
 .image-container-final4 {
-    margin-left:25vw;
+    margin-left:22vw;
     margin-bottom: 10vw;
 }
 
@@ -286,23 +286,13 @@ body {
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* Start the images with opacity: 1, and we will hide them using JavaScript */
-.image-section img {
-    width: 70%;
-    height: auto;
-    object-fit: cover;
-    opacity: 1;
-    /* Default to visible */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
+/* image animation */
 
-/* Hidden state for images initially */
 .hidden-on-scroll {
     opacity: 0;
     transform: translateY(50px);
 }
 
-/* Class added by JavaScript to trigger the scroll animation */
 .show-on-scroll {
     opacity: 1;
     transform: translateY(0);

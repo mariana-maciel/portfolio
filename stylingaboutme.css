@@ -1,13 +1,13 @@
-/* Smooth scrolling */
+/* smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Body styling */
+/* body styling */
 body {
     margin: 0;
     padding: 0;
-    overflow-y: scroll; /* Enable vertical scrolling */
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -15,10 +15,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Fade-in animation for all elements except navbar */
+/* fade-in animation for all elements except navbar */
 .fade-in {
     opacity: 0;
-    animation: fadeIn 0.5s forwards; /* Adjusted duration for faster fade */
+    animation: fadeIn 0.5s forwards; 
 }
 
 @keyframes fadeIn {
@@ -30,11 +30,10 @@ body {
     }
 }
 
-/* Navbar styling */
+/* navbar styling */
 #navbar {
     display: flex;
     justify-content: space-between;
-    /* border-bottom: 2.5px solid #000000; */
     padding-top: 0.8vw;
     padding-bottom: 0.8vw;
     background-color: #ffffff;
@@ -84,54 +83,57 @@ body {
     font-size: 1.1em;
 }
 
-/* Text styling for the header */
+/* title */
 .header-text {
     position: absolute;
-    top: 8vw; /* Adjusted to overlap the images */
+    top: 8vw; 
     left: 50%;
     transform: translateX(-50%);
     font-family: "halyard-display", sans-serif;
     font-weight: 400;
     font-style: normal;
     color: #000000;
-    z-index: 2; /* Ensure the text is on top of images */
-    pointer-events: none; /* Allow interaction with images */
+    z-index: 2; 
+    pointer-events: none;
     font-size: 10vw;
     margin-left: 3vw;
 }
 
+/* text */
 
 .text {
     font-family: "halyard-text", sans-serif;
     font-weight: 100;
     font-style: normal;
-    margin-right: 28vw;
+    margin-right: 29vw;
     font-size: 1vw;
     position: absolute;
     left: 45%;
     transform: translateX(-50%);
     color: #000000;
-    z-index: 2; /* Ensure the text is on top of images */
-    pointer-events: none; /* Allow interaction with images */
+    z-index: 2; 
+    pointer-events: none;
     top: 20vw;
     text-align: justify;
     margin-top: 0.2vw;
 }
 
-/* Container for images */
+/* image 1*/
+
 .image-container {
     display: flex;
     align-items: center;
-    margin-top: 8vw; /* Give space for text overlap */
+    margin-top: 8vw;
 }
 
-/* Styling for the first image */
 .picture img {
     width: 30vw;
     height: auto;
     z-index: 1;
     margin-left: 22vw;
 }
+
+/* image 2*/
 
 .picture2 {
     width: 30vw;
@@ -147,12 +149,13 @@ body {
     z-index: 1;
 }
 
-/* Applying fade-in class to the images and text */
+/* fade-in to the images and text */
+
 .image-container,
 .header-text,
 .text,
 .picture img,
 .picture2 img {
-    opacity: 0; /* Initial state for fade-in */
-    animation: fadeIn 0.5s forwards; /* Faster fade-in duration */
+    opacity: 0; 
+    animation: fadeIn 0.5s forwards; 
 }

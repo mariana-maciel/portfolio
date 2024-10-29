@@ -1,13 +1,13 @@
-/* Smooth scrolling */
+/* smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Body styling */
+/* body styling */
 body {
     margin: 0;
     padding: 0;
-    overflow-y: scroll; /* Enable vertical scrolling */
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -15,11 +15,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Navbar styling */
+/* navbar */
 #navbar {
     display: flex;
     justify-content: space-between;
-    /* border-bottom: 2.5px solid #000000; */
     padding-top: 0.8vw;
     padding-bottom: 0.8vw;
     background-color: #ffffff;
@@ -70,7 +69,6 @@ body {
 }
 
 /* title - portfolio - name */
-
 .title-container {
     display: flex;
     align-items: center;
@@ -99,7 +97,7 @@ body {
     font-style: normal;
     text-align: right;
     margin-right: 30px;
-    line-height: 0.7; /* Ensures consistent line height */
+    line-height: 0.7;
     font-size: 16vw;
 }
 
@@ -108,11 +106,10 @@ body {
 .portfolio span {
     display: inline-block;
     transition: transform 0.3s ease;
-    transform-origin: bottom; /* Keeps the bottom of the letter in place */
-    position: relative;
+    transform-origin: bottom;
 }
 .portfolio span:hover {
-    transform: scaleY(0.5); /* Shrinks the letter vertically */
+    transform: scaleY(0.5);
 }
 
 /* images auto scroll */
@@ -141,13 +138,11 @@ body {
 }
 
 .scroller-container {
-    /* Without this, scroll will jump on desktop if any vertical scrollbar is shown */
     width: 100vw;
 }
 
 .scroller-item {
     flex: 1 0 calc(100% / var(--scrolling-gallery-items-visible));
-    /* If you want to have it continuous without any spaces, remove two lines below */
     box-sizing: border-box;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -155,10 +150,10 @@ body {
 
 .scroller img {
     display: block;
-    height: 220px; /* sizes of the images */
+    height: 220px;
     object-fit: cover;
     object-position: center;
-    width: 150px; /* sizes of the images */
+    width: 150px;
     transition: transform 0.3s ease;
 }
 
