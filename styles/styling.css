@@ -809,4 +809,179 @@ a.animated:not(:hover) .nav-text {
 }
 
 /* ----------- letstalk.html --------- */
+
+/* ----------- project section style --------- */
+
+/* Project Page Specific Styles */
+      .project-page {
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: 100px 0;
+      }
+
+      .project-page-content {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        width: 100%;
+      }
+
+      .project-page-capa {
+        margin: 0 30px 0 30px;
+        background: #111;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 60px;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease;
+      }
+
+      .project-page-capa.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .project-page-video-capa {
+        width: 100%;
+        height: 600px;
+        background: #222;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: #666;
+      }
+
+      .project-page-video-capa video {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 20px;
+        max-width: 100%;
+      }
+
+      .project-page-text {
+        margin: 0 30px 0 30px;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease;
+        transition-delay: 0.2s;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 80px;
+      }
+
+      .project-page-text.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .project-page-title {
+        font-size: 3.5rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+
+      .project-page-subtitle {
+        font-size: 1.2rem;
+        font-family: "andale-mono-mt-pro", sans-serif;
+        color: #888;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .project-page-description {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: #ccc;
+        margin-bottom: 30px;
+      }
+
+      .project-page-information {
+        margin-top: 40px;
+      }
+
+      .project-page-information-item {
+        margin-bottom: 15px;
+      }
+
+      .project-page-information-label {
+        color: #888;
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+      }
+
+      .project-page-information-value {
+        font-size: 1.1rem;
+      }
+
+      .project-page-information-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .project-page-tag {
+        background: #222;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        border: 1px solid #333;
+      }
+
+      /* Images Cards Section */
+      .project-page-images-section {
+        padding: 100px 0;
+      }
+
+      .project-page-image-card {
+        background: #111;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 60px;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease;
+      }
+
+      .project-page-image-card.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .project-page-image-placeholder {
+        width: 100%;
+        height: 600px;
+        background: #222;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: #666;
+      }
+
+      /* Responsive */
+      @media (max-width: 968px) {
+        .project-page-text {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .project-page-title {
+          font-size: 2.5rem;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .project-page-title {
+          font-size: 2rem;
+        }
+      }
  
