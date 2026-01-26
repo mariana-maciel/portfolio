@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/styling.css" />
+        <link rel="stylesheet" href="https://use.typekit.net/nac8jam.css">
+  </head>
+
+<body>
+  
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="./main.html"><span class="nav-text">m+m</span></a></li>
+      <li><a href="./aboutme.html"><span class="nav-text">about</span></a></li>
+      <li><a href="./work.html"><span class="nav-text">work</span></a></li>
+      <li><a href="./archive.html"><span class="nav-text">archive</span></a></li>
+      <li><a href="./letstalk.html"><span class="nav-text">let's talk</span></a></li>
+    </ul>
+  </nav>
+
+  <main class="main">
+
+    <h1 class="title">projects</h1>
+
+      <nav class="categories">
+        <!-- <a href="#all" class="active">ALL WORKS</a> -->
+        <a href="#branding" class="active">BRANDING</a>
+        <!-- <a href="#print">POSTERS & PRINT</a> -->
+        <!-- <a href="#illustration">ILLUSTRATION</a> -->
+        <a href="#3d">3DIMENSION</a>
+        <a href="#video">VIDEO</a>
+      </nav>
+
+        <div class="gallery">
+            
+            <div class="gallery-item" data-category="branding" >
+              <a href="gare-do-oriente.html">
+                <img src="./images/capa_GDO.png" alt="Iphone App"/>
+                <div class="overlay">
+                    <h3>Gare do Oriente</h3>
+                    <p>Brand identity, Wayfinding & App</p>
+                </div>
+              </a>  
+            </div>
+
+            <div class="gallery-item" data-category="branding">
+                <img src="./images/capa_JDA.jpg" alt="Bag JDA" />
+                <div class="overlay">
+                    <h3>Jóia de África</h3>
+                    <p>Brand identity & Product Design</p>
+                </div>
+            </div>  
+
+            <div class="gallery-item" data-category="print">
+                <img src="./images/capa_KZ.jpg" alt="Zine on a plastic bag" />
+                <div class="overlay">
+                    <h3>Franz Kafka</h3>
+                    <p>Fanzine Design</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="print">
+                <img src="./images/capa_Album.jpg" alt="Posters on the wall"/>
+                <div class="overlay">
+                    <h3>Vynil Cover</h3>
+                    <p>ALbum Cover Design</p>
+                </div>
+            </div>
+     
+
+            <div class="gallery-item" data-category="print">
+                <img src="./images/capa_sefl.jpg" alt="Posters on the wall"/>
+                <div class="overlay">
+                    <h3>Self</h3>
+                    <p>Magazine cover Design</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="3d">
+                <img src="./images/capa_descarrilados.jpg" alt="Posters on the wall" />
+                <div class="overlay">
+                    <h3">This is me!</h3>
+                    <p>Self presentation Illustration</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="video">
+                <img src="./images/capa_curta.jpg" alt="Posters on the wall" />
+                <div class="overlay">
+                    <h3">This is me!</h3>
+                    <p>Self presentation Illustration</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Contact Section -->
+    <section class="contact" >
+
+        <div class="contact-title">let's talk</div>
+        <div class="contact-email">
+             <a href="mailto:mariana.mesquita.maciel@gmail.com">mariana.mesquita.maciel@gmail.com</a>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/mariana._maciel/?hl=en" class="icon-wrapper">
+                <img src="./images/instagram_logo.png" alt="Instagram" class="social-icon-img">
+            </a>
+
+            <a href="https://www.linkedin.com/in/marianamaciell/" class="icon-wrapper">
+                <img src="./images/linkdin_logo.png" alt="LinkedIn" class="social-icon-img">
+            </a>
+        </div>
+        
+    </section>
+
+    <script>
+          const navLinks = document.querySelectorAll('nav a');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            // Add animated class only to this specific link
+            this.classList.add('animated');
+        }, { once: true });
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const categoryLinks = document.querySelectorAll(".categories a");
+        const galleryItems = Array.from(document.querySelectorAll(".gallery-item"));
+        let isTransitioning = false;
+
+        // Initially show only the first category (branding) on page load
+        const initialCategory = "branding";
+        galleryItems.forEach((item) => {
+          const itemCat = item.dataset.category;
+          if (itemCat !== initialCategory) {
+            item.classList.add("hidden");
+          }
+        });
+
+        categoryLinks.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            
+            // Prevent multiple rapid clicks during transition
+            if (isTransitioning) return;
+            isTransitioning = true;
+
+            // Update active button
+            categoryLinks.forEach((l) => l.classList.remove("active"));
+            link.classList.add("active");
+
+            const category = link.getAttribute("href").substring(1);
+
+            // Phase 1: Fade out all items
+            galleryItems.forEach((item) => {
+              item.classList.add("fade-out");
+              item.classList.remove("fade-in");
+            });
+
+            // Phase 2: After fade-out, reorganize and fade in
+            setTimeout(() => {
+              // Show/hide items based on category (removed "all" logic)
+              galleryItems.forEach((item) => {
+                const itemCat = item.dataset.category;
+                const shouldShow = itemCat === category;
+                
+                if (shouldShow) {
+                  item.classList.remove("hidden", "fade-out");
+                  item.classList.add("fade-in");
+                } else {
+                  item.classList.add("hidden");
+                  item.classList.remove("fade-out", "fade-in");
+                }
+              });
+              
+              isTransitioning = false;
+            }, 100);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M+M</title>
+    <link rel="stylesheet" href="./styles/styling.css"/>
+    <link rel="stylesheet" href="https://use.typekit.net/nac8jam.css">
+</head>
+<body>
+
+<!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="./main.html"><span class="nav-text">m+m</span></a></li>
+      <li><a href="./aboutme.html"><span class="nav-text">about</span></a></li>
+      <li><a href="./work.html"><span class="nav-text">work</span></a></li>
+      <li><a href="./archive.html"><span class="nav-text">archive</span></a></li>
+      <li><a href="./letstalk.html"><span class="nav-text">let's talk</span></a></li>
+    </ul>
+  </nav>
+  
+  <!-- Contact Section -->
+    <section class="contact" >
+
+        <div class="contact-title">let's talk</div>
+        <div class="contact-email">
+             <a href="mailto:mariana.mesquita.maciel@gmail.com">mariana.mesquita.maciel@gmail.com</a>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/mariana._maciel/?hl=en" class="icon-wrapper">
+                <img src="./images/instagram_logo.png" alt="Instagram" class="social-icon-img">
+            </a>
+
+            <a href="https://www.linkedin.com/in/marianamaciell/" class="icon-wrapper">
+                <img src="./images/linkdin_logo.png" alt="LinkedIn" class="social-icon-img">
+            </a>
+        </div>
+        
+    </section>
+
+<script>
+    const navLinks = document.querySelectorAll('nav a');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            // Add animated class only to this specific link
+            this.classList.add('animated');
+        }, { once: true });
+    });
+</script>
+  </body>
+</html>

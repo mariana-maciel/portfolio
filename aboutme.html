@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M+M</title>
+    <link rel="stylesheet" href="./styles/styling.css"/>
+    <link rel="stylesheet" href="https://use.typekit.net/nac8jam.css">
+</head>
+<body>
+
+<!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="./main.html"><span class="nav-text">m+m</span></a></li>
+      <li><a href="./aboutme.html"><span class="nav-text">about</span></a></li>
+      <li><a href="./work.html"><span class="nav-text">work</span></a></li>
+      <li><a href="./archive.html"><span class="nav-text">archive</span></a></li>
+      <li><a href="./letstalk.html"><span class="nav-text">let's talk</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- About Me -->
+
+    <div class="container-about">
+            <h1>about me</h1>
+
+        <!-- About Section with Image -->
+        <div class="about-section">
+            <div class="about-text">
+                <p>Hi, I'm Mariana Maciel, a graphic designer recently graduated in Global Design from 
+                IADE. With a focus on graphic and web design, I'm now starting my professional journey,
+                always open to learning and expanding my practice.</p>
+                <br>
+                <p>Over the past years, I've explored different areas of design, where I unexpectedly 
+                found a strong passion for animation and storytelling. I'm especially drawn to 
+                narrative-driven projects, and my work is inspired by cinema, art history, and culture.
+                I approach each project with curiosity, sensitivity, and a personal point of view.</p>
+            </div>
+            
+            <div class="about-image">
+                <img src="./images/about_photos.png" alt="Mariana Maciel">
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="info-section">
+            <h2>education</h2>
+            <div class="info-content">
+                <div class="info-item">
+                    <h3>IADE Creative University <span class="date">2025 - 2022</span></h3>
+                    <p>Bachelor in Global Design</p>
+                </div>
+                
+                <div class="info-item">
+                    <h3>NABA Nuova Academia di Belle Arti Milano <span class="date">2025</span></h3>
+                    <p>Erasmus Semester in Graphic Design and Art Direction - Visual Design</p>
+                </div>
+                
+                <div class="info-item">
+                    <h3>CODE UNIVERSITY OF APPLIED SCIENCES, BERLIN <span class="date">2024</span></h3>
+                    <p>Erasmus BIP - "Content with Content"</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="info-section">
+            <h2>experience</h2>
+            <div class="info-content">
+                <div class="info-item">
+                    <h3>IADE Creative University <span style="color: #b0b0b0;">- 2025 -2022</span></h3>
+                    <p>Bachelor in Global Design</p>
+                </div>
+                
+                <div class="info-item">
+                    <h3>NABA Nuova Academia di Belle Arti Milano <span style="color: #b0b0b0;">- 2025</span></h3>
+                    <p>Erasmus Semester in Graphic Design and Art Direction - Visual Design</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="info-section">
+            <h2>skills</h2>
+            <div class="info-content">
+                <div class="info-item">
+                    <h3>IADE Creative University <span style="color: #b0b0b0;">- 2025 -2022</span></h3>
+                    <p>Bachelor in Global Design</p>
+                </div>
+                
+                <div class="info-item">
+                    <h3>NABA Nuova Academia di Belle Arti Milano <span style="color: #b0b0b0;">- 2025</span></h3>
+                    <p>Erasmus Semester in Graphic Design and Art Direction - Visual Design</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+  <!-- Contact Section -->
+    <section class="contact" >
+
+        <div class="contact-title">let's talk</div>
+        <div class="contact-email">
+             <a href="mailto:mariana.mesquita.maciel@gmail.com">mariana.mesquita.maciel@gmail.com</a>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/mariana._maciel/?hl=en" class="icon-wrapper">
+                <img src="./images/instagram_logo.png" alt="Instagram" class="social-icon-img">
+            </a>
+
+            <a href="https://www.linkedin.com/in/marianamaciell/" class="icon-wrapper">
+                <img src="./images/linkdin_logo.png" alt="LinkedIn" class="social-icon-img">
+            </a>
+        </div>
+        
+    </section>
+
+<script>
+    const navLinks = document.querySelectorAll('nav a');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            // Add animated class only to this specific link
+            this.classList.add('animated');
+        }, { once: true });
+    });
+</script>
+  </body>
+</html>

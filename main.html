@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M+M</title>
+    <link rel="stylesheet" href="./styles/styling.css"/>
+    <link rel="stylesheet" href="https://use.typekit.net/nac8jam.css">
+</head>
+<body>
+
+<!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="./main.html"><span class="nav-text">m+m</span></a></li>
+      <li><a href="./aboutme.html"><span class="nav-text">about</span></a></li>
+      <li><a href="./work.html"><span class="nav-text">work</span></a></li>
+      <li><a href="./archive.html"><span class="nav-text">archive</span></a></li>
+      <li><a href="./letstalk.html"><span class="nav-text">let's talk</span></a></li>
+    </ul>
+  </nav>
+
+<!-- Hero section -->
+    <section class="hero">
+        <p>
+            <span class="blinking-dot"></span>
+            AVAILABLE FOR FREELANCE
+        </p>
+        <img src="./images/m+m.png" alt="m+m">
+        <div class="hero-text">
+            <h1 class="line line-1">mariana</h1>
+            <h1 class="line line-2">maciel</h1>
+        </div>
+        <div class="information">
+            <p>BASED IN LISBON, PORTUGAL</p>
+            <p>// GRAPHIC DESIGNER + ART DIRECTOR</p>
+        </div>
+    </section>
+
+<!-- Project section -->
+    <section class="projects">
+
+        <!-- Row 1 -->
+        <div class="project-row">
+
+            <!-- Card 1 -->
+            <a href="./projects/gdo.html" class="project-card">
+
+                <div class="image-wrapper">
+                    <img src="./images/capa_GDO.png" alt="Project 1">
+                </div>
+
+                <div class="project-text">
+                    <div class="title-wrapper">
+                        <div class="project-title">Gare do Oriente</div>
+                    </div>
+                    <div class="project-subtitle">App and Wayfinding</div>
+                </div>
+            </a>
+
+            <!-- Card 2 -->
+            <a href="./projects/jda.html" class="project-card">
+
+                <div class="image-wrapper">
+                    <img src="./images/capa_JDA.jpg" alt="Project 2">
+                </div>
+
+                <div class="project-text">
+                    <div class="title-wrapper">
+                        <div class="project-title">Jóia de África</div>
+                    </div>
+                    <div class="project-subtitle">BRANDING AND PRODUCT DESIGN</div>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Row 2 -->
+        <div class="project-row">
+
+            <!-- Card 3 -->
+            <a href="./projects/pl.html" class="project-card">
+
+                <div class="image-wrapper">
+                    <img src="images/capa_PL.jpg" alt="Project 3">
+                </div>
+
+                <div class="project-text">
+                    <div class="title-wrapper">
+                        <div class="project-title">Para:Lou</div>
+                    </div>
+                    <div class="project-subtitle">SHORT-FILM</div>
+                </div>
+            </a>
+
+            <!-- Card 4 -->
+            <a href="./projects/descarrilados.html" class="project-card">
+
+                <div class="image-wrapper">
+                    <img src="./images/capa_descarrilados.jpg" alt="Project 4">
+                </div>
+
+                <div class="project-text">
+                    <div class="title-wrapper">
+                        <div class="project-title">Descarrilados</div>
+                    </div>
+                    <div class="project-subtitle">SHORT-MOVIE</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="project-row">
+
+            <!-- Card 5 -->
+            <a href="./projects/kz.html" class="project-card">
+
+                <div class="image-wrapper">
+                    <img src="./images/capa_KZ.jpg" alt="Project 5">
+                </div>
+
+                <div class="project-text">
+                    <div class="title-wrapper">
+                        <div class="project-title">Kafka Zine</div>
+                    </div>
+                    <div class="project-subtitle">FANZINE</div>
+                </div>
+            </a>
+
+            <!-- Card 6 -->
+            <a href="./projects/perola.html" class="project-card">
+
+                <div class="image-wrapper">
+                    <img src="./images/capa_PEROLA.jpg" alt="Project 6">
+                </div>
+
+                <div class="project-text">
+                    <div class="title-wrapper">
+                        <div class="project-title">A Pérola</div>
+                    </div>
+                    <div class="project-subtitle">PHOTOGRAPHY</div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+<!-- Contact Section -->
+    <section class="contact" >
+
+        <div class="contact-title">let's talk</div>
+        <div class="contact-email">
+             <a href="mailto:mariana.mesquita.maciel@gmail.com">mariana.mesquita.maciel@gmail.com</a>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/mariana._maciel/?hl=en" class="icon-wrapper">
+                <img src="./images/instagram_logo.png" alt="Instagram" class="social-icon-img">
+            </a>
+
+            <a href="https://www.linkedin.com/in/marianamaciell/" class="icon-wrapper">
+                <img src="./images/linkdin_logo.png" alt="LinkedIn" class="social-icon-img">
+            </a>
+        </div>
+        
+    </section>
+
+<script>
+    const navLinks = document.querySelectorAll('nav a');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            // Add animated class only to this specific link
+            this.classList.add('animated');
+        }, { once: true });
+    });
+</script>
+ 
+</body>
+</html>
