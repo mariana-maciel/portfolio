@@ -987,16 +987,16 @@ a.animated:not(:hover) .nav-text {
     transform: translateY(0);
 }
 
-        @media (max-width: 768px) {
-            .row-cards {
-                grid-template-columns: 1fr;
-            }
+@media (max-width: 768px) {
+    .row-cards {
+    grid-template-columns: 1fr;
+}
 
-            .card-image {
-                height: 250px;
-            }
+.card-image {
+    height: 250px;
+}
 
-            .big-card .card-image {
-                height: 350px;
-            }
-        }
+.big-card .card-image {
+    height: 350px;
+}
+}
