@@ -523,12 +523,13 @@ a.animated:not(:hover) .nav-text {
 
 /* Category Navigation */
 .categories {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;   /* evita quebrar se tela pequena */
-  margin-bottom: 30px;
-  position: relative; /* garante que não se sobrepõe */
-  z-index: 1;         /* só por precaução */
+    font-family: "andale-mono-mt-pro", sans-serif;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;   
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;      
 }
 .categories a {
   color: #888;
@@ -631,8 +632,10 @@ a.animated:not(:hover) .nav-text {
   margin-bottom: 5px;
 }
 .overlay p {
-  font-size: 14px;
-  opacity: 0.8;
+    font-family: "andale-mono-mt-pro", sans-serif;
+    font-size: 14px;
+    opacity: 0.8;
+    color: #c6c6c6;
 }
 /* Responsive */
 @media (max-width: 768px) {

@@ -45,52 +45,47 @@
           <div>
             <div class="project-description">
               <p>
-                Gare do Oriente is a transportation center made with a modern
-                system enabling a railway station, a bus station and a metro
-                station. Constructed to serve the Expo 98 world's fair, it is
-                located in the Parque das Nações, has become one of Lisbon's
-                iconic landmarks. Calatrava crafted an elegant design that
-                merges form and function, blending cutting-edge architecture
-                with the historic essence of Portuguese culture.
+                Gare do Oriente is one of Portugal's busiest transport hubs and an architectural
+                landmark by Santiago Calatrava. Despite its iconic design, the station presents
+                major wayfinding challenges due to its scale, unclear signage, and lack of a 
+                cohesive visual identity, making navigation difficult for many users.
               </p>
               <br />
               <p>
-                As visitors of this space we faced a wayfinding challenge: the
-                station's expansive layout and multiple platforms made it
-                difficult to navigate efficiently, especially for first-time
-                visitors or those unfamiliar with the complex. The absence of a
-                cohesive visual identity and clear signage contributed to
-                confusion, hindering seamless travel.
+                To address these issues, a flexible visual system was developed from Calatrava’s
+                 architectural forms, creating a modern and adaptable identity. A clear wordmark 
+                 and a vibrant yet functional color palette ensure legibility across complex physical 
+                 and digital environments, while the system is applied consistently across all solutions
+                  to create a coherent and intuitive navigation experience.
               </p>
             </div>
 
             <!-- Extra text -->
-            <div class="project-page-information">
-              <div class="project-page-information-item">
-                <div class="project-page-information-label">Year</div>
-                <div class="project-page-information-value">
+            <div class="project-extra">
+                <div class="project-lable">Year</div>
+                <div class="project-value">
                   5th semester of university, 2024
                 </div>
-              </div>
-              <div class="project-page-information-item">
-                <div class="project-page-information-label">Category</div>
-                <div class="project-page-information-value">
+
+              <div class="project-extra">
+                <div class="project-lable">Category</div>
+                <div class="project-value">
                   Brand identity / Logo Design / Wayfinding / Ux Design
                 </div>
               </div>
-              <div class="project-page-information-item">
-                <div class="project-page-information-label">Tools</div>
+              <div class="project-extra">
+                <div class="project-lable">Tools</div>
               </div>
-              <div class="project-page-information-tags">
-                <span class="project-page-tag">ADOBE AFTER EFFECTS</span>
-                <span class="project-page-tag">ADOBE INDESIGN</span>
-                <span class="project-page-tag">ADOBE ILLUSTRATOR</span>
-                <span class="project-page-tag">ADOBE PHOTOSHOP</span>
-                <span class="project-page-tag">ADOBE PREMIER PRO</span>
-                <span class="project-page-tag">SKETCH UP</span>
-                <span class="project-page-tag">ENSCAPE</span>
-                <span class="project-page-tag">FIGMA</span>
-                <span class="project-page-tag">BLENDER</span>
+              <div class="project-tags">
+                <span class="tag">ADOBE AFTER EFFECTS</span>
+                <span class="tag">ADOBE INDESIGN</span>
+                <span class="tag">ADOBE ILLUSTRATOR</span>
+                <span class="tag">ADOBE PHOTOSHOP</span>
+                <span class="tag">ADOBE PREMIER PRO</span>
+                <span class="tag">SKETCH UP</span>
+                <span class="tag">ENSCAPE</span>
+                <span class="tag">FIGMA</span>
+                <span class="tag">BLENDER</span>
               </div>
             </div>
           </div>
@@ -99,17 +94,46 @@
     </section>
 
     <!-- Digital Experience Section -->
-    <section class="project-page-images-section">
-      <div class="container">
-        <div class="project-page-image-card" data-animate>
-          <div class="project-page-image-placeholder">[Project Image Placeholder]</div>
+    <section class="project-images">
+
+      <div class="image-row">
+
+        <div class="image-card" data-animate>
+          <video src="../images/gdo_image1.mp4" autoplay loop muted playsinline></video>
         </div>
 
-        <div class="project-page-image-card" data-animate>
-          <div class="project-page-image-placeholder">[Project Image Placeholder]</div>
+        <div class="image-card" data-animate>
+          <video src="../images/gdo_image2.mp4" autoplay loop muted playsinline></video>
+        </div>
+
+      </div>
+
+      <div class="image-card" data-animate>
+            <video src="../images/gdo_image3.mp4" autoplay loop muted playsinline></video>
+      </div>
+
+      <div class="project-text-section" data-animate>
+      
+        <div class="project-title">
+          <h1>Wayfinding</h1>
+        </div>
+      
+        <div class="project-description">
+          <p>
+            Gare do Oriente is one of Portugal's busiest transport hubs and an architectural
+            landmark by Santiago Calatrava. Despite its iconic design, the station presents
+            major wayfinding challenges due to its scale, unclear signage, and lack of a
+            cohesive visual identity, making navigation difficult for many users.
+          </p>
+        </div>
+      
+      </div>
+
+        <div class="image-card" data-animate>
+          <img src="../images/gdo_image5.jpg" alt="Gare do Oriente cover image">
         </div>
       </div>
-    </section>
+    
     </section>
 
       <!-- Contact Section -->
@@ -124,24 +148,24 @@
 
         <div class="social-icons">
             <a href="https://www.instagram.com/mariana._maciel/?hl=en" class="icon-wrapper">
-                <img src="./images/instagram_logo.png" alt="Instagram" class="social-icon-img">
+                <img src="../images/instagram_logo.png" alt="Instagram" class="social-icon-img">
             </a>
 
             <a href="https://www.linkedin.com/in/marianamaciell/" class="icon-wrapper">
-                <img src="./images/linkdin_logo.png" alt="LinkedIn" class="social-icon-img">
+                <img src="../images/linkdin_logo.png" alt="LinkedIn" class="social-icon-img">
             </a>
         </div>
         
     </section>
 
     <script>
-          const navLinks = document.querySelectorAll('nav a');
+      const navLinks = document.querySelectorAll('nav a');
     
-    navLinks.forEach(link => {
-        link.addEventListener('mouseenter', function() {
-            // Add animated class only to this specific link
-            this.classList.add('animated');
-        }, { once: true });
+        navLinks.forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                // Add animated class only to this specific link
+                this.classList.add('animated');
+            }, { once: true });
     });
 
       // Intersection Observer for scroll animations
