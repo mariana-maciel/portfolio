@@ -963,6 +963,7 @@ a.animated:not(:hover) .nav-text {
     width: 100%;
     height: 400px;
     object-fit: cover;
+    display: block;
 }
 
 .big-card .card-image {
