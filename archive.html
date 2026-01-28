@@ -214,56 +214,104 @@
         }, { once: true });
     });
 
-     const archiveItems = document.querySelectorAll('.archive-item');
-        const modalLightbox = document.getElementById('modalLightbox');
-        const modalImg = document.getElementById('modalImg');
-        const btnClose = document.getElementById('btnClose');
-        const btnPrev = document.getElementById('btnPrev');
-        const btnNext = document.getElementById('btnNext');
-        let currentIndex = 0;
+    const archiveItems = document.querySelectorAll('.archive-item');
+    const modalLightbox = document.getElementById('modalLightbox');
+    const modalImg = document.getElementById('modalImg');
+    const btnClose = document.getElementById('btnClose');
+    const btnPrev = document.getElementById('btnPrev');
+    const btnNext = document.getElementById('btnNext');
+    let currentIndex = 0;
 
-        function openModal(index) {
-            currentIndex = index;
-            const img = archiveItems[index].querySelector('img');
-            modalImg.src = img.src;
-            modalLightbox.classList.add('is-active');
-            document.body.style.overflow = 'hidden';
-        }
+    function openModal(index) {
+        currentIndex = index;
+        const img = archiveItems[index].querySelector('img');
+        modalImg.src = img.src;
+        modalLightbox.classList.add('is-active');
+        document.body.style.overflow = 'hidden';
+    }
 
-        function closeModal() {
-            modalLightbox.classList.remove('is-active');
-            document.body.style.overflow = 'auto';
-        }
+    function closeModal() {
+        modalLightbox.classList.remove('is-active');
+        document.body.style.overflow = 'auto';
+    }
 
-        function showPrevious() {
-            currentIndex = (currentIndex - 1 + archiveItems.length) % archiveItems.length;
-            openModal(currentIndex);
-        }
+    function showPrevious() {
+        currentIndex = (currentIndex - 1 + archiveItems.length) % archiveItems.length;
+        openModal(currentIndex);
+    }
 
-        function showForward() {
-            currentIndex = (currentIndex + 1) % archiveItems.length;
-            openModal(currentIndex);
-        }
+    function showForward() {
+        currentIndex = (currentIndex + 1) % archiveItems.length;
+        openModal(currentIndex);
+    }
 
-        archiveItems.forEach((item, index) => {
-            item.addEventListener('click', () => openModal(index));
-        });
+    archiveItems.forEach((item, index) => {
+        item.addEventListener('click', () => openModal(index));
+    });
 
-        btnClose.addEventListener('click', closeModal);
-        btnPrev.addEventListener('click', showPrevious);
-        btnNext.addEventListener('click', showForward);
+    if (btnClose) btnClose.addEventListener('click', closeModal);
+    if (btnPrev) btnPrev.addEventListener('click', showPrevious);
+    if (btnNext) btnNext.addEventListener('click', showForward);
 
+    if (modalLightbox) {
         modalLightbox.addEventListener('click', (e) => {
             if (e.target === modalLightbox) closeModal();
         });
+    }
 
-        document.addEventListener('keydown', (e) => {
-            if (!modalLightbox.classList.contains('is-active')) return;
-            if (e.key === 'Escape') closeModal();
-            if (e.key === 'ArrowLeft') showPrevious();
-            if (e.key === 'ArrowRight') showForward();
+    document.addEventListener('keydown', (e) => {
+        if (!modalLightbox || !modalLightbox.classList.contains('is-active')) return;
+        if (e.key === 'Escape') closeModal();
+        if (e.key === 'ArrowLeft') showPrevious();
+        if (e.key === 'ArrowRight') showForward();
+    });
+
+    // Mobile Menu Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.classList.remove('menu-open');
         });
+    });
 
+    // Smooth page transitions
+    document.addEventListener('DOMContentLoaded', function() {
+        // Fade in on page load
+        document.body.style.opacity = '0';
+        setTimeout(() => {
+            document.body.style.transition = 'opacity 0.3s ease';
+            document.body.style.opacity = '1';
+        }, 100);
+
+        // Fade out on link click
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                
+                // Only apply to internal links (not mailto or external)
+                if (href && !href.startsWith('mailto:') && !href.startsWith('http') && !href.startsWith('#')) {
+                    e.preventDefault();
+                    document.body.style.opacity = '0';
+                    
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 300);
+                }
+            });
+        });
+    });
 </script>
   </body>
 </html>

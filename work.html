@@ -125,10 +125,8 @@
             </a>
         </div>
         
-    </section>
-
-    <script>
-          const navLinks = document.querySelectorAll('nav a');
+   <script>
+    const navLinks = document.querySelectorAll('nav a');
     
     navLinks.forEach(link => {
         link.addEventListener('mouseenter', function() {
@@ -145,53 +143,99 @@
         // Initially show only the first category (branding) on page load
         const initialCategory = "branding";
         galleryItems.forEach((item) => {
-          const itemCat = item.dataset.category;
-          if (itemCat !== initialCategory) {
-            item.classList.add("hidden");
-          }
+            const itemCat = item.dataset.category;
+            if (itemCat !== initialCategory) {
+                item.classList.add("hidden");
+            }
         });
 
         categoryLinks.forEach((link) => {
-          link.addEventListener("click", (e) => {
-            e.preventDefault();
-            
-            // Prevent multiple rapid clicks during transition
-            if (isTransitioning) return;
-            isTransitioning = true;
-
-            // Update active button
-            categoryLinks.forEach((l) => l.classList.remove("active"));
-            link.classList.add("active");
-
-            const category = link.getAttribute("href").substring(1);
-
-            // Phase 1: Fade out all items
-            galleryItems.forEach((item) => {
-              item.classList.add("fade-out");
-              item.classList.remove("fade-in");
-            });
-
-            // Phase 2: After fade-out, reorganize and fade in
-            setTimeout(() => {
-              // Show/hide items based on category (removed "all" logic)
-              galleryItems.forEach((item) => {
-                const itemCat = item.dataset.category;
-                const shouldShow = itemCat === category;
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
                 
-                if (shouldShow) {
-                  item.classList.remove("hidden", "fade-out");
-                  item.classList.add("fade-in");
-                } else {
-                  item.classList.add("hidden");
-                  item.classList.remove("fade-out", "fade-in");
-                }
-              });
-              
-              isTransitioning = false;
-            }, 100);
-          });
+                // Prevent multiple rapid clicks during transition
+                if (isTransitioning) return;
+                isTransitioning = true;
+
+                // Update active button
+                categoryLinks.forEach((l) => l.classList.remove("active"));
+                link.classList.add("active");
+
+                const category = link.getAttribute("href").substring(1);
+
+                // Phase 1: Fade out all items
+                galleryItems.forEach((item) => {
+                    item.classList.add("fade-out");
+                    item.classList.remove("fade-in");
+                });
+
+                // Phase 2: After fade-out, reorganize and fade in
+                setTimeout(() => {
+                    // Show/hide items based on category
+                    galleryItems.forEach((item) => {
+                        const itemCat = item.dataset.category;
+                        const shouldShow = itemCat === category;
+                        
+                        if (shouldShow) {
+                            item.classList.remove("hidden", "fade-out");
+                            item.classList.add("fade-in");
+                        } else {
+                            item.classList.add("hidden");
+                            item.classList.remove("fade-out", "fade-in");
+                        }
+                    });
+                    isTransitioning = false;
+                }, 100);
+            });
         });
-      });
-    </script>
+    });
+
+    // Mobile Menu Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        });
+    });
+
+    // Smooth page transitions
+    document.addEventListener('DOMContentLoaded', function() {
+        // Fade in on page load
+        document.body.style.opacity = '0';
+        setTimeout(() => {
+            document.body.style.transition = 'opacity 0.3s ease';
+            document.body.style.opacity = '1';
+        }, 100);
+
+        // Fade out on link click
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                
+                // Only apply to internal links (not mailto, external, or hash links)
+                if (href && !href.startsWith('mailto:') && !href.startsWith('http') && !href.startsWith('#')) {
+                    e.preventDefault();
+                    document.body.style.opacity = '0';
+                    
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 300);
+                }
+            });
+        });
+    });
+</script>
   </body>
 </html>

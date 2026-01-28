@@ -76,6 +76,8 @@ a.animated:not(:hover) .nav-text {
     animation: slideDown 0.3s ease-in-out forwards;
 }
 
+
+
 @keyframes slideUp {
     0% {
         transform: translateY(0);
