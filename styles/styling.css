@@ -287,7 +287,7 @@ a.animated:not(:hover) .nav-text {
 
 .hero img {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
@@ -441,6 +441,26 @@ a.animated:not(:hover) .nav-text {
     justify-content: flex-start;
     align-items: flex-start;
     text-decoration: none; 
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.project-card .visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animações de Scroll */
+[data-animate] {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+[data-animate].visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .image-wrapper {
@@ -561,6 +581,16 @@ a.animated:not(:hover) .nav-text {
 .social-icons {
     display: flex;
     gap: 15px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+    transition-delay: 0.6s;
+}
+
+.social-icons[data-animate].visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s; 
 }
 
 .icon-wrapper {

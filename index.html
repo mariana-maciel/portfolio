@@ -51,7 +51,7 @@
         <div class="project-row">
 
             <!-- Card 1 -->
-            <a href="./projects/gdo.html" class="project-card">
+            <a href="./projects/gdo.html" class="project-card" data-animate>
 
                 <div class="image-wrapper">
                     <img src="./images/capa_GDO.png" alt="Project 1">
@@ -66,7 +66,7 @@
             </a>
 
             <!-- Card 2 -->
-            <a href="./projects/jda.html" class="project-card">
+            <a href="./projects/jda.html" class="project-card" data-animate>
 
                 <div class="image-wrapper">
                     <img src="./images/capa_JDA.jpg" alt="Project 2">
@@ -86,7 +86,7 @@
         <div class="project-row">
 
             <!-- Card 3 -->
-            <a href="./projects/pl.html" class="project-card">
+            <a href="./projects/pl.html" class="project-card" data-animate>
 
                 <div class="image-wrapper">
                     <img src="images/capa_PL.jpg" alt="Project 3">
@@ -101,7 +101,7 @@
             </a>
 
             <!-- Card 4 -->
-            <a href="./projects/descarrilados.html" class="project-card">
+            <a href="./projects/descarrilados.html" class="project-card" data-animate>
 
                 <div class="image-wrapper">
                     <img src="./images/capa_descarrilados.jpg" alt="Project 4">
@@ -120,7 +120,7 @@
         <div class="project-row">
 
             <!-- Card 5 -->
-            <a href="./projects/kz.html" class="project-card">
+            <a href="./projects/kz.html" class="project-card" data-animate>
 
                 <div class="image-wrapper">
                     <img src="./images/capa_KZ.jpg" alt="Project 5">
@@ -135,7 +135,7 @@
             </a>
 
             <!-- Card 6 -->
-            <a href="./projects/perola.html" class="project-card">
+            <a href="./projects/perola.html" class="project-card" data-animate>
 
                 <div class="image-wrapper">
                     <img src="./images/capa_PEROLA.jpg" alt="Project 6">
@@ -153,16 +153,16 @@
     </section>
 
 <!-- Contact Section -->
-    <section class="contact" >
+    <section class="contact">
 
-        <div class="contact-title">let's talk</div>
-        <div class="contact-email">
+        <div class="contact-title" data-animate>let's talk</div>
+        <div class="contact-email" data-animate>
              <a href="mailto:mariana.mesquita.maciel@gmail.com">mariana.mesquita.maciel@gmail.com</a>
         </div>
 
-        <div class="separator"></div>
+        <div class="separator" data-animate></div>
 
-        <div class="social-icons">
+        <div class="social-icons" data-animate>
             <a href="https://www.instagram.com/mariana._maciel/?hl=en" class="icon-wrapper">
                 <img src="./images/instagram_logo.png" alt="Instagram" class="social-icon-img">
             </a>
@@ -179,7 +179,6 @@
     
     navLinks.forEach(link => {
         link.addEventListener('mouseenter', function() {
-            // Add animated class only to this specific link
             this.classList.add('animated');
         }, { once: true });
     });
@@ -203,22 +202,41 @@
         });
     });
 
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                console.log('Element animated:', entry.target); // Para debug
+            }
+        });
+    }, observerOptions);
+
+    // Observe all elements with data-animate attribute
+    document.addEventListener("DOMContentLoaded", () => {
+        const animateElements = document.querySelectorAll("[data-animate]");
+        console.log('Found elements to animate:', animateElements.length); // Para debug
+        animateElements.forEach((el) => observer.observe(el));
+    });
+
     // Smooth page transitions
     document.addEventListener('DOMContentLoaded', function() {
-        // Fade in on page load
         document.body.style.opacity = '0';
         setTimeout(() => {
             document.body.style.transition = 'opacity 0.3s ease';
             document.body.style.opacity = '1';
         }, 100);
 
-        // Fade out on link click
         const links = document.querySelectorAll('a');
         links.forEach(link => {
             link.addEventListener('click', function(e) {
                 const href = this.getAttribute('href');
                 
-                // Only apply to internal links (not mailto or external)
                 if (href && !href.startsWith('mailto:') && !href.startsWith('http') && !href.startsWith('#')) {
                     e.preventDefault();
                     document.body.style.opacity = '0';
