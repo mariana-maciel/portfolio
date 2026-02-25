@@ -6,8 +6,23 @@
     <title>M+M</title>
     <link rel="stylesheet" href="./styles/styling.css"/>
     <link rel="stylesheet" href="https://use.typekit.net/nac8jam.css">
+    <style>
+        body.letstalk-page .contact {
+            min-height: 100svh;
+            padding-top: clamp(120px, 18vh, 240px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            body.letstalk-page .contact {
+                padding-top: clamp(100px, 14vh, 170px);
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="letstalk-page">
 
 <!-- Navbar -->
 <nav>
