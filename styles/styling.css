@@ -832,18 +832,26 @@ a.animated:not(:hover) .nav-text {
 
 @media (max-width: 480px) {
     .container-about {
-        padding: 70px 20px 20px;
+        padding: 70px 12px 20px;
     }
 
     .container-about h1 {
         margin-bottom: 30px;
         font-size: 80px;
        letter-spacing: -4px;
-       text-align: center;
+       text-align: left;
+       padding-left: 8px;
+       padding-right: 8px;
     }
 
     .about-section {
         margin-bottom: 30px;
+    }
+
+    .about-text {
+        margin-left: 8px;
+        margin-right: 8px;
+        margin-top: 12px;
     }
 
     .about-text p {
@@ -1034,6 +1042,27 @@ a.animated:not(:hover) .nav-text {
   }
 }
 
+@media (max-width: 480px) {
+  .main {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 80px;
+  }
+
+  .title {
+    font-size: 80px;
+    letter-spacing: -4px;
+    text-align: center;
+    padding-bottom: 40px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .categories {
+    justify-content: center;
+  }
+}
+
 
 /* ----------- archive.html --------- */
 
@@ -1188,6 +1217,21 @@ a.animated:not(:hover) .nav-text {
 }
 
 @media (max-width: 480px) {
+    .archive {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .archive h1 {
+        font-size: 80px;
+        letter-spacing: -4px;
+        text-align: center;
+        padding-top: 80px;
+        padding-bottom: 40px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
     .archive-grid {
         grid-template-columns: 1fr;
         }
