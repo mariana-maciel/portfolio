@@ -306,6 +306,14 @@
                     document.body.style.opacity = '1';
                 }, 100);
 
+                // Ensure back/forward cache restores visibility
+                window.addEventListener('pageshow', function (event) {
+                    if (event.persisted) {
+                        document.body.style.transition = 'opacity 0.3s ease';
+                        document.body.style.opacity = '1';
+                    }
+                });
+
                 // Fade out on link click
                 const links = document.querySelectorAll('a');
                 links.forEach(link => {
