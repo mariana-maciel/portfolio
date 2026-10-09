@@ -733,6 +733,7 @@ a.animated:not(:hover) .nav-text {
 .info-item h3 {
     font-size: 18px;
     font-weight: 600;
+    line-height: 1.2;
     color: #e8e4d9;
 }
 
@@ -819,6 +820,10 @@ a.animated:not(:hover) .nav-text {
         gap: 30px;
         margin-bottom: 0px;
         margin-left: 0;
+    }
+
+    .info-section + .info-section {
+        margin-top: 35px;
     }
 
     .info-section h2 {
